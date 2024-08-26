@@ -1,1 +1,1 @@
-# student_mgt_sys
+# student_mgt_sys-Django
