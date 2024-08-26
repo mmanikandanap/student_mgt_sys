@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  {% load static %}
+  <title>Update Data</title>
+<style>
+  /* form{
+    padding-left: 10px;
+    padding-top: 10px;
+  } */
+  table{
+    border: 2px solid grey;
+    /* padding: 10px; */
+    /* color: azure; */
+  }
+  th,td{
+    padding: 10px;
+  }
+  /* .center{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  } */
+  .button{
+    /* color: black;9+685
+    |1
+    background-color: rgb(216, 239, 122); */
+    border-radius: 8px;
+    padding: 8px;
+  }
+  /* img{
+    
+     position: fixed; 
+   
+
+  } */
+
+</style>
+</head>
+<body>
+  <!-- <img src="{% static 'img/image1.jpg/' %}"> -->
+  
+<div class="container-fluid">
+  <center>
+  <div class="col-md-offset-4 col-md-4" >
+  <form action="/updateData/{{data.id}}" autocomplete="off" method="POST">
+  {% csrf_token %}
+  
+  <table class="center">
+    <tr>
+      <th colspan="2">
+        <h1>Update Student Details</h1><hr>
+      </th>
+    </tr>
+  <tr>
+    <th>Name</th>
+    <td><input type="text" name="name" value="{{data.Name}}"></td>
+  </tr>
+  <tr>
+    <th>Age</th>
+    <td><input type="text" name="age" value="{{data.Age}}"></td>
+  </tr> 
+  <tr>
+    <th>Sex</th>
+    <td><input type="text" name="sex" value="{{data.Sex}}"></td>
+  </tr>
+  <tr>
+    <th> Standard </th>
+    <td><input type="text" name="standard" value="{{data.Standard}}"></td>
+  </tr>
+  <tr>
+    <th>Percentage</th>
+    <td><input type="text" name="percentage" value="{{data.Percentage}}"></td>
+  </tr>
+  <tr>
+    <th>Address</Address></th>
+    <td><input type="text" name="address" value="{{data.Address}}"></td>
+  </tr>
+  <tr> 
+    <th>
+
+    </th> 
+    <th>
+      <input  type="submit" value="Update" class="btn btn-primary btn-block">
+     
+    </th>
+  </tr>
+   
+</table>
+</form>
+ 
+
+ 
+</div>
+</center>
+</div>
+ 
+  
+</body>
+</html>
